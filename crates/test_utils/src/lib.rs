@@ -26,7 +26,6 @@ use cairo_lang_starknet::casm_contract_class::{
     CasmContractEntryPoint,
     CasmContractEntryPoints,
 };
-use cairo_lang_starknet::NestedIntList;
 use cairo_lang_utils::bigint::BigUintAsHex;
 use indexmap::IndexMap;
 use num_bigint::BigUint;
@@ -689,7 +688,6 @@ auto_impl_get_test_instance! {
         pub prime: BigUint,
         pub compiler_version: String,
         pub bytecode: Vec<BigUintAsHex>,
-        pub bytecode_segment_lengths: Option<NestedIntList>,
         pub hints: Vec<(usize, Vec<Hint>)>,
         pub pythonic_hints: Option<Vec<(usize, Vec<String>)>>,
         pub entry_points_by_type: CasmContractEntryPoints,
@@ -709,10 +707,6 @@ auto_impl_get_test_instance! {
 
     pub struct BigUintAsHex {
         pub value: BigUint,
-    }
-    pub enum NestedIntList {
-        Leaf(usize) = 0,
-        Node(Vec<NestedIntList>) = 1,
     }
 
     binary(bool);
