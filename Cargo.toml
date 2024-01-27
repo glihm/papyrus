@@ -33,8 +33,8 @@ async-trait = "0.1.56"
 axum = "0.6.12"
 base64 = "0.13.0"
 bitvec = "1.0.1"
-#blockifier = { path = "/mnt/g/sn/blockifier/crates/blockifier" }
-blockifier = { git = "https://github.com/glihm/blockifier", branch = "wip-250" }
+blockifier = { path = "/mnt/g/sn/blockifier/crates/blockifier" }
+#blockifier = { git = "https://github.com/glihm/blockifier", branch = "wip-250" }
 bytes = "1"
 byteorder = "1.4.3"
 cairo-lang-starknet = "=2.5.0"
@@ -119,3 +119,7 @@ tower = "0.4"
 unsigned-varint = "0.8.0"
 url = "2.2.2"
 validator = "0.12"
+
+[patch.crates-io]
+cairo-felt = { git = "https://github.com/glihm/cairo-vm", branch = "dojo-saya-v092" }
+cairo-vm = { git = "https://github.com/glihm/cairo-vm", branch = "dojo-saya-v092" }
